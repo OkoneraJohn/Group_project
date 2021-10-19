@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="group.css">
+    <title>Signup</title>
+</head>
+<body>
+    <header>
+        <div class="nav"><p>Nav bar</p></div>
+    </header>
+    <div class="main">
+        <div class="side1">
+            <p>Dashboard</p>
+        </div>
+        <div class="side2">
+            <div>
+
+            </div>
+            <div class="main-content">
+                <div>
+                    <div class="heading">Sign Up</div>
+                    <div>
+                        <div>
+                            <p for="">Email Address:</p>
+                            <input id="email" type="email"><br>
+                            <small></small>
+                        </div>
+                        <div>
+                            <p for="">Username:</p>
+                            <input id="uname" type="text"><br>
+                            <small></small>
+                        </div>
+                        <div>
+                            <p for="">Password:</p>
+                            <input id="passwrd" type="password"><br>
+                            <small></small>
+                        </div>
+                        <div>
+                            <p for="">Confirm password:</p>
+                            <input id="passwrd2" type="password"><br>
+                            <small></small>
+                        </div>
+                        <div class="btn31">
+                            <input class="submit fifth" type="button" value="Submit">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="line"></div>
+                    <div>OR</div>
+                    <div class="line"></div>
+                </div>
+                <div style="height: 50%;">
+                   <div class="heading">Sign Up with:</div>
+                   <div>
+                       <button class="btn01">Google</button><br>
+                       <button class="btn02">Facebook</button>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+const uname = document.getElementById('uname');
+const email = document.getElementById('email');
+const passwrd = document.getElementById('passwrd');
+const passwrd2 = document.getElementById('passwrd2');
+const send = document.getElementById('send');
+
+send.addEventListener('click',checkInputs);
+
+function checkInputs(){
+   //trim
+    const unameValue = uname.value.trim();
+    const emailValue = email.value.trim();
+    const passwrdValue = passwrd.value.trim();
+    const passwrd2Value = passwrd2.value.trim();
+
+ //username
+  if (unameValue === '') {
+    setErrorFor( uname,"Username required");    
+  }else{
+    setSuccessFor(uname);
+  }
+  
+  //password
+  if(passwrdValue === ''){
+     setErrorFor(passwrd,"Password required");
+  }else{
+     setSuccessFor(passwrd);
+  }
+ //email
+ if (emailValue === '') {
+    setErrorFor( email,"Email Address required");
+ }else {
+    setSuccessFor(email);    
+ }
+ //password2
+  if(passwrd2Value === ''){
+     setErrorFor(passwrd2,"Password required");
+  }else if(passwrdValue !== passwrd2Value){
+     setErrorFor(passwrd2,'Wrong password');
+  }else{
+     setSuccessFor(passwrd2);
+  }
+  
+  
+}
+function setErrorFor(input, message) {
+   const validate = input.parentElement;
+   const small = validate.querySelector('small');
+   validate.className = 'validate error';
+   small.innerText = message ;
+}
+function setSuccessFor(input){
+   const validate = input.parentElement;
+   validate.className = 'validate success';
+}
+</script>
+</html>

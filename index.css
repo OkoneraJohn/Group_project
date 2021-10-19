@@ -1,0 +1,250 @@
+* {
+  box-sizing:border-box;
+}
+
+body{
+  background-color: rgb(255, 255, 255);
+}
+
+/*title/heading*/
+.wel{
+  font-size: xx-large;
+  font-weight: 600;
+}
+
+/*nav bar*/
+.topnav {
+  overflow: hidden;
+  background-color: rgb(0, 128, 0);
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: rgb(242, 242, 242);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.topnav a:hover {
+  background-color: rgb(221, 221, 221);
+  color: rgb(0, 0, 0);
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.topnav .active{
+  background-color: #717171;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+  
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+/*footer*/
+footer a img{
+  height: 50px;
+  width: 50px;
+}
+/*latest post area*/
+.latest{
+  display: flex;
+}
+
+.latest .div1{
+  width: 30%;
+  height: 700px;
+  border-right: 1px solid rgb(128, 128, 128);
+}
+.latest .div1 div{
+  width: 98%;
+  height: 150px;
+  font-size: 30px;
+}
+.latest .div1 div p{
+  font-size: 20px;
+  overflow: hidden;
+}
+.latest .div1>p{
+  font-size: 25px; 
+  text-align: center; 
+  margin: 0;
+}
+ .latest .div1 small{
+   font-size: initial;
+ }
+
+.latest .div2{
+  width: 70%;
+  height: 700px;
+  margin: 10px;
+}
+.latest .div2 .postimg{
+  height: 70%;
+  overflow: hidden;
+}
+.latest .div2 .postimg img{
+  width: 100%;
+  height: 90%;
+}
+.latest .div2 .postimg p{
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  margin: 0;
+  overflow: hidden;
+}
+.latest .div2 .postname{
+  height: 30%;
+  font-size: 20px;
+  overflow: hidden;
+}
+.latest .div2 .postname p{
+ font-weight: 600;
+ overflow: hidden;
+}
+
+/*other posts*/
+.all{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10px;
+  align-content:space-around;
+  justify-content:space-evenly;
+  border-bottom: 1px solid rgb(128, 128, 128);
+}
+.posts img{
+  width: 250px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+.posts{
+  height: 400px;
+  width: 300px;
+  padding: 15px;
+}
+.posts .div1{
+  height: 60%;
+  width: 100%;
+}
+.posts .div1 img{
+  height: 75%;
+  width: 100%;
+  border-radius: 5px;
+}
+.posts .div1 p{
+  margin: 0%;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+.posts .div2{
+  height: 40%;
+  width: 100%;
+}
+.posts .div2 p{
+  margin: 0%;
+  text-align: center;
+}
+.sub input{
+  width: 300px;
+  height: 30px;
+  border-radius: 20px;
+  padding: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  outline: none;
+}
+.sub{
+  align-items: center;
+  font-size: x-large;
+}
+.sub button{
+  height: 30px;
+  width: 100px;
+  border-radius: 20px;
+  border: rgb(203, 255, 203);
+  background-color: rgb(0, 128, 0);
+  cursor: pointer;
+}
+
+/*slide animation*/
+.flip{
+  text-align: center;
+  overflow: hidden;
+  height: 70px ;
+  font-size: 50px;
+}
+
+.flip div{
+  position: relative;
+}
+
+.anime1,.anime2{
+  font-family: algerian ;
+  position: relative !important;
+  animation-duration: 15s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.anime1{
+  animation-name: flip1;
+}
+
+.anime2{
+  animation-name: flip2;
+}
+
+@keyframes flip1{
+  0%,5%{
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  10%,40%{
+    transform: translateY(1px);
+    opacity: 1;
+  }
+  45%,100%{
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
+
+@keyframes flip2{
+  0%,45%{
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  50%,97%{
+    transform: translateY(-60px);
+    opacity: 1;
+  }
+  100%{
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}

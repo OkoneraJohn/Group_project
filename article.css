@@ -1,0 +1,109 @@
+.topnav {
+    overflow: hidden;
+    background-color: rgb(0, 128, 0);
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: rgb(242, 242, 242);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.active, .dot:hover {
+    background-color: rgb(113, 113, 113);
+}
+
+.wel{
+    font-size: xx-large;
+    font-weight: 600;
+}
+
+.imgheading{
+    background:url(victor-nnakwe-AE2uBSYnCVM-unsplash.jpg);
+    background-size: cover;
+    backdrop-filter: blur(100px);
+    display: flex;
+    justify-content: center;
+
+}
+.imgheading img{
+    width: 800px;
+}
+.imgheading .imgtext{
+    color: rgb(251, 245, 245);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    position: absolute;
+    bottom: 10px;
+}
+
+.editor{
+    display: flex;
+    align-items: center;
+}
+
+.editor_img img{
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid rgb(0, 128, 0);
+    margin-right: 20px;
+}
+
+.editor_name{
+    color: rgb(0,0,0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+.editor_date{
+    color: rgb(0,0,0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.editor_content p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.highlight{
+    width: 250px;
+    height: 200px;
+    font-size: 35px;
+}
+.box1,.box2{
+    width: 20px;
+    height: 20px;
+    position:relative;
+    margin: 0%;
+}
+.box1{
+    bottom: 60px;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+}
+.box2{
+    left: 230px;
+    bottom: 270px;
+    border-right: 3px solid black;
+    border-top: 3px solid black;
+}
+
+footer .head{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 200px;
+    color: white;
+    font-size: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: linear-gradient(to bottom, rgb(203, 255, 203),rgba(0, 128, 0, 0.3), rgb(0, 128, 0));
+}
+footer img{
+    width: 80px;
+}
+footer .bottom{
+
+}

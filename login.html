@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="group.css">
+    <title>Log In</title>
+</head>
+<body>
+    <header>
+        <div class="nav"><p>Nav bar</p></div>
+    </header>
+    <div class="main">
+        <div class="side1">
+            <p>Dashboard</p>
+        </div>
+        <div class="side2">
+            <div>
+
+            </div>
+            <div class="main-content">
+                <div>
+                    <div class="heading">
+                        Log In
+                    </div>
+                    <div>
+                        <div>
+                            <p for="uname">Username:</p>
+                            <input type="text" id="uname"><br>
+                            <small></small>
+                        </div>
+                        <div>
+                            <p for="password">Password:</p>
+                            <input type="password" name="" id="passwrd"><br>
+                            <small></small><br><br>
+                        </div>
+                        <div>
+                            <a href="signup.html">Don't have an account</a><br>
+                            <button id="send">Log In</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+const uname = document.getElementById('uname');
+const passwrd = document.getElementById('passwrd');
+const send = document.getElementById('send');
+
+send.addEventListener('click',checkInputs);
+
+function checkInputs(){
+   //trim
+    const unameValue = uname.value.trim();
+    const passwrdValue = passwrd.value.trim();
+
+ //username
+  if (unameValue === '') {
+    setErrorFor( uname,"Username required");    
+  }else{
+    setSuccessFor(uname);
+  }
+  //password
+  if(passwrdValue === ''){
+     setErrorFor(passwrd,"Password required");
+  }else{
+     setSuccessFor(passwrd);
+  }
+}
+function setErrorFor(input, message) {
+   const validate = input.parentElement;
+   const small = validate.querySelector('small');
+   validate.className = 'validate error';
+   small.innerText = message ;
+}
+function setSuccessFor(input){
+   const validate = input.parentElement;
+   validate.className = 'validate success';
+}
+</script>
+</html>
